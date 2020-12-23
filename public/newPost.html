@@ -6,6 +6,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="./styles/styleNewPost.css">
+    
     <title>MURAL DE AVISOS</title>
 </head>
 <body>
@@ -18,15 +20,26 @@
             </ul>
         </nav>
     </header>
-    <div id="posts">
-        
-        
+
+    <div id="formulario">
+        <h1>Novo Post</h1>
+        <p>Preencha os campos abaixo e clique e enviar</p>
+        <div class="form">
+            <p class="hide" id="aviso"></p>
+            <input type="text" id="inputTitle" placeholder="Título">
+            <textarea id="inputText" placeholder="Texto"></textarea>
+            <button onclick="submit()">ENVIAR</button>
+        </div>
+
     </div>
+    
 
     <footer>
         <p>Site feito por: @caiokeidi</p>
     </footer>
 
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/scriptNewPost.js"></script>
+    
+
 </body>
 </html>

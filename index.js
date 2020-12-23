@@ -7,6 +7,7 @@ const app = express();
 
 app.use('/api', apiRoute);
 app.use('/', express.static(path.join(__dirname, "public")));
+app.use('/newPost', express.static(path.join(__dirname, "public/newPost.html")));
 
 
 
