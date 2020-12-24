@@ -1,3 +1,4 @@
+const { post } = require("../routes/api");
 
 module.exports = {
     posts: [
@@ -18,8 +19,25 @@ module.exports = {
         this.posts.push({id, title, text});
     },
 
+    getPost(id){
+        let postA = isSameID(this.posts, id)
+        return postA;
+    }
+
 }
 
 function generateID(){
-    return Math.random().toString(36).substr(2, 9);
+    return Math.random().toString(10).substr(2, 9);
+}
+
+function isSameID(posts, id){
+
+    let postTarget = ''
+    posts.forEach((postX) => {
+        if(postX.id == id){
+            postTarget = postX;
+        }
+    })
+    //For some reason, i needed to put the return here, it was returning undefined.
+    return postTarget;
 }

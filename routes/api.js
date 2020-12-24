@@ -21,5 +21,12 @@ router.post('/newPost', bodyParser.json(), (req, res) => {
 
 })
 
+router.get('/post/:id', (req, res) => {
+    let postagem = posts.getPost(req.params.id);
+
+    res.json(JSON.stringify(postagem));
+
+})
+
 module.exports = router;
 
