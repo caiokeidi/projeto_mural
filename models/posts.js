@@ -1,4 +1,4 @@
-const { post } = require("../routes/api");
+
 
 module.exports = {
     posts: [
