@@ -37,3 +37,4 @@ function enterPost(id){
     console.log(id)
     window.location.href = "http://localhost:3000/post?id=" + id;
 }
+

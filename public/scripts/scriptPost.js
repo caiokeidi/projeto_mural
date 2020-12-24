@@ -21,3 +21,14 @@ function updateScreen(){
         text.innerText = postObject.text;
     })
 }
+
+function deletePost(){
+    const urlParams = new URLSearchParams(window.location.search);
+    const idParam = urlParams.get('id');
+
+    let url = "http://localhost:3000/api/delete/" + idParam;
+    fetch(url).then(res => {
+        console.log("Requisição enviada com sucesso");
+        window.location.href = "http://localhost:3000"
+    })
+}

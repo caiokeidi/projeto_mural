@@ -28,5 +28,16 @@ router.get('/post/:id', (req, res) => {
 
 })
 
+router.get('/delete/:id', (req, res) => {
+    let deletePost = posts.deletePost(req.params.id);
+    if(deletePost == "false"){
+        res.send("Post apagado com sucesso")
+    }else{
+        res.send("Erro ao apagar post")
+    }
+
+
+})
+
 module.exports = router;
 
